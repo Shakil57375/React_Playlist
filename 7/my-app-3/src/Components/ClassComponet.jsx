@@ -1,14 +1,37 @@
 /* eslint-disable react/prop-types */
-import React from "react"
+import React from "react";
 
 class Clock extends React.Component {
-    render(){
-        return(
-            <h1 className="heading">
-                <span className="text">{new Date().toLocaleTimeString(this.props.locale)}</span>
-            </h1>
-        )
-    }
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+
+  componentDidMount() {
+    this.clockTimer = setInterval(() => {
+      this.tick();
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.clockTimer);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date(),
+    });
+  }
+
+  render() {
+    return (
+      <h1 className="heading">
+        <span className="text">
+          {this.state.date.toLocaleTimeString(this.props.locale)}
+        </span>
+      </h1>
+    );
+  }
 }
 
 export default Clock;
