@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import './App.css'
+import Clock from './Components/ClassComponet'
 
-function App({locale}) {
+function App() {
 
   return (
     <>
      <h1>
-      <span className="text">Hello {new Date().toLocaleTimeString(locale)} </span>
+      <Clock locale = "bn-BD"/>
      </h1>
     </>
   )
