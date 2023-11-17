@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,23 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const javascript = {
+        name: "Javascript",
+        libraries: ["React", "Vue", "Angular"],
+        printLibraries: function () {
+          console.log(this);
+          // what will be this you have to tell it explicitly by using bind method(if you use normal function)
+          // this.libraries.forEach(function(library){
+          //   console.log(`${this.name} loves ${library}`)
+          // }.bind(this))
+          // if you use arrow function you don't have to tell what will be this explicitly.
+          this.libraries.forEach((library) => {
+            console.log(`${this.name} loves ${library}`);
+          });
+        },
+      };
+      javascript.printLibraries();
+    </script>
   </body>
 </html>
