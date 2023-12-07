@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import Button from "./Button";
 
 class Clock extends React.Component {
   constructor(props) {
@@ -23,21 +24,30 @@ class Clock extends React.Component {
     });
   }
 
-  handleClick(e) {
-    e.preventDefault();
+  handleClick = () => {
     this.setState({
       locale: "en-US",
     });
-  }
+  };
 
   render() {
     const { date, locale } = this.state;
     return (
       <h1 className="heading">
         <span className="text">{date.toLocaleTimeString(locale)}</span>
-        <button type="submit" onClick={this.handleClick}>
-          Click me
-        </button>
+        {/* to send parameter you have to wrap it */}
+        {/* <button type="submit" onClick={() => this.handleClick(parameter)}> */}
+        {locale === "bn-BD" ? (
+          <Button change={this.handleClick}
+           locale="en-US">
+            Click me
+          </Button>
+        ) : (
+          <Button change={this.handleClick}
+           locale="bn-BD">
+            Click me
+          </Button>
+        )}
       </h1>
     );
   }
