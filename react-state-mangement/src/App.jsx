@@ -1,5 +1,19 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./App.css";
+
+const Names = ({ names }) => {
+  const [fdName, setNames] = useState(names);
+  console.log(fdName);
+  return (
+    <div className="card">
+      {fdName.map((name) => (
+        <li key={name}>{name}</li>
+      ))}
+    </div>
+  );
+};
+
 function Counter({ value }) {
   let initialValue = value;
   let [count, setCount] = useState(initialValue);
@@ -14,10 +28,11 @@ function Counter({ value }) {
 }
 
 function App() {
+  const names = ["saif", "javed", "faisal"];
   return (
     <div className="card">
       <Counter value={3} />
-      <Counter value={0} />
+      <Names names={names} />
     </div>
   );
 }
