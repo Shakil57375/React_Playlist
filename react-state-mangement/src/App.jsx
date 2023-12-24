@@ -2,24 +2,31 @@
 import { useState } from "react";
 import "./App.css";
 
-const Names = ({ names }) => {
-  const [fdName, setFdNames] = useState(names);
-  const [name , setName] = useState("")
-  console.log(name)
-  const  AddItem = () =>{
-    setFdNames([...fdName, name]);
-    setName("")
-  }
+function Names({ names }) {
+  console.log(names);
+  const [fr, setFr] = useState(names);
+  const [newFd, setNewFd] = useState("");
+  console.log(newFd);
+  const AddFriend = () => {
+    setFr([...fr, newFd]);
+    setNewFd("");
+  };
   return (
     <div>
-      {fdName.map((name) => (
-        <li key={name}>{name}</li>
+      {fr.map((name) => (
+        <ul key={name}>
+          <li>{name}</li>
+        </ul>
       ))}
-      <input type="text" value={name} onChange={e => setName(e.target.value)}/>
-      <button onClick={AddItem}>add Item</button>
+      <input
+        type="text"
+        value={newFd}
+        onChange={(e) => setNewFd(e.target.value)}
+      />
+      <button onClick={AddFriend}>Add Frd</button>
     </div>
   );
-};
+}
 
 function Counter({ value }) {
   let initialValue = value;
