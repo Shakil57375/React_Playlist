@@ -6,7 +6,7 @@ function App() {
   const variable = "Take the shot!";
   return (
     <div>
-      <Clock locale="bn-BD" />
+      {/* <Clock locale="bn-BD" /> */}
       <Football variable = {variable} />
     </div>
   );
