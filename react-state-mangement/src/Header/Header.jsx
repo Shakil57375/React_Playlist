@@ -36,7 +36,7 @@ const Header = () => {
             <Link className="font-mono" to="/video">
               use effect
             </Link>
-            <Link className="font-mono" to="/blogs">
+            <Link className="font-mono" to="/useReducer">
               use reducer
             </Link>
           </div>
