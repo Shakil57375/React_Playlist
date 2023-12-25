@@ -11,7 +11,7 @@ const UseState = () => {
   return (
     <div>
       <div>{myName} is {age} </div>
-      <button onClick={handleAddName}> add Name</button>
+      <button style={{backgroundColor : "blueviolet", padding : "10px 15px"}} onClick={handleAddName}> add Name</button>
     </div>
   );
 };
