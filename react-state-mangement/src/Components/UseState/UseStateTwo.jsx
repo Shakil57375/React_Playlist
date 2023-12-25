@@ -12,6 +12,7 @@ const UseStateTwo = () => {
       <p>convert into uppercase</p>
       <input
         type="text"
+        className="border-2 border-blue-600"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />

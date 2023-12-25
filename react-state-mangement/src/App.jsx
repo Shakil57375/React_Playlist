@@ -24,6 +24,7 @@ function Names({ names }) {
       <input
         type="text"
         value={newFd}
+        style={{ border: "1px solid green" }}
         onChange={(e) => setNewFd(e.target.value)}
       />
       <button
@@ -53,11 +54,16 @@ function App() {
   const names = ["saif", "javed", "faisal"];
   return (
     <div>
-      <Names names={names} />
-      <Counter value={3} />
-      <UseState />
-      <UseSateOne names={names} />
-      <UseStateTwo />
+      <div>
+        <p className="text-center text-5xl text-cyan-600 font-bold underline">use State</p>
+      <div className="grid grid-cols-5 gap-3">
+        <Names names={names} />
+        <Counter value={3} />
+        <UseState />
+        <UseSateOne names={names} />
+        <UseStateTwo />
+      </div>
+      </div>
     </div>
   );
 }
