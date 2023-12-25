@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import UseState from "./Components/UseState/UseState";
 import UseSateOne from "./Components/UseState/UseSateOne";
+import UseStateTwo from "./Components/UseState/UseStateTwo";
 
 function Names({ names }) {
   console.log(names);
@@ -55,7 +56,8 @@ function App() {
       <Names names={names} />
       <Counter value={3} />
       <UseState />
-      <UseSateOne names = {names}/>
+      <UseSateOne names={names} />
+      <UseStateTwo />
     </div>
   );
 }

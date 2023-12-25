@@ -8,7 +8,7 @@ const UseSateOne = () => {
 
     function DecrementCounter  () {
         setCount(previous => previous - 1)
-    }
+    } 
   return (
     <div>
         <button onClick={IncrementCounter}>Increment</button>
