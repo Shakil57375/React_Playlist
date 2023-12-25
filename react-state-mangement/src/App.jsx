@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./App.css";
+import UseState from "./Components/UseState/UseState";
 
 function Names({ names }) {
   console.log(names);
@@ -23,7 +24,12 @@ function Names({ names }) {
         value={newFd}
         onChange={(e) => setNewFd(e.target.value)}
       />
-      <button onClick={AddFriend}>Add Frd</button>
+      <button
+        style={{ backgroundColor: "red", padding: "8px 16px" }}
+        onClick={AddFriend}
+      >
+        Add Frd
+      </button>
     </div>
   );
 }
@@ -47,6 +53,7 @@ function App() {
     <div>
       <Names names={names} />
       <Counter value={3} />
+      <UseState />
     </div>
   );
 }
