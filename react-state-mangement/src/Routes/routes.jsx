@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Main/Main";
 import UseStateExplained from "../Pages/UseStateExplained/UseStateExplained";
-import UseReducer from "../Components/UseReducer/UseReducer";
+import UseReducerExplained from "../Components/UseReducer/UseReducerExplained";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/useReducer",
-        element: <UseReducer />,
+        element: <UseReducerExplained />,
       },
     ],
   },

@@ -11,9 +11,9 @@ const UseSateOne = () => {
     } 
   return (
     <div>
-        <button onClick={IncrementCounter}>Increment</button>
+        <button className="btn btn-success" onClick={IncrementCounter}>Increment</button>
         <p>{count}</p>
-        <button onClick={DecrementCounter}>Decrement</button>
+        <button className="btn btn-secondary" onClick={DecrementCounter}>Decrement</button>
     </div>
   )
 }

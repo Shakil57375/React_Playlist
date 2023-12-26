@@ -16,7 +16,7 @@ const UseStateTwo = () => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <button onClick={handleUppercase}>make it uppercase</button>
+      <button className="btn btn-warning" onClick={handleUppercase}>make it uppercase</button>
     </div>
   );
 };
