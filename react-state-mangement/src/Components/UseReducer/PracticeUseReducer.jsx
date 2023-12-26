@@ -31,9 +31,9 @@ const PracticeUseReducer = () => {
     dispatch({ type: ACTIONS.DECREMENT });
   };
   return (
-    <div>
+    <div className="flex items-center gap-5">
       <button className="btn btn-success" onClick={Increment}> + </button>
-      <p> {state.count} </p>
+      <p className="text-2xl font-bold"> {state.count} </p>
       <button className="btn btn-info" onClick={Decrement}> - </button>
     </div>
   );
